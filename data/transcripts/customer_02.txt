@@ -1,0 +1,29 @@
+CALL: FleetVista - Feature Request Discussion
+Date: 2026-05-08
+Attendees: Dana Kim (CSM), Wesley Nakamura (CTO, FleetVista)
+Account Status: Existing Customer (Year 3)
+Account ARR: $480,000
+Renewal: 2026-12-01
+NPS last quarter: 9
+
+[00:01] Dana Kim: Wesley, you sent over the list. Walk me through priorities.
+
+[00:02] Wesley Nakamura: Three things, in order. First is webhook expansion. We've talked about this. We need granular event types pushed to us — every state transition, including customs and yard events. Right now we have a poller hammering your API and it's adding latency to our internal SLA dashboard.
+
+[00:05] Dana Kim: This is the third customer in two weeks who's raised this with me.
+
+[00:06] Wesley Nakamura: I'm not surprised. Anyone running an event-driven architecture downstream of you is going to hit this wall. Second priority — UPS Ground and UPS Surepost as first-class carriers. About 35% of our parcel volume runs through UPS and we're maintaining a custom integration layer ourselves.
+
+[00:09] Dana Kim: UPS comes up a lot. Let me ask — if we shipped UPS support in Q3, would that change your renewal conversation?
+
+[00:10] Wesley Nakamura: Yes. Frankly it would let me commit to a multi-year. As of now we're going year-to-year because UPS is a risk.
+
+[00:12] Dana Kim: And the third?
+
+[00:13] Wesley Nakamura: Carrier performance analytics. We can pull raw data out via API, but we need rolled-up on-time-delivery, exception rates, and damage rates per carrier per lane. We're building this ourselves now in Looker and it's a quarter of an FTE.
+
+[00:15] Dana Kim: That's interesting — that's adjacent to a benchmarking product we've been scoping internally. Can I have our product lead reach out to you on this specifically?
+
+[00:16] Wesley Nakamura: Yes please. And one piece of feedback — the way I have to file feature requests right now, through the support portal, those requests go into a black hole. I never know if anyone read them. Fix that loop, you'll get better signal.
+
+[Call ended 00:18]

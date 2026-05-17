@@ -1,0 +1,29 @@
+CALL: PortLane Logistics - Quarterly Business Review
+Date: 2026-05-10
+Attendees: Dana Kim (CSM), Olivia Park (Director of Ops, PortLane), Ben Hartford (Integration Engineer, PortLane)
+Account Status: Existing Customer (Year 2)
+Account ARR: $240,000
+Renewal: 2026-09-15
+NPS last quarter: 7
+
+[00:02] Dana Kim: Olivia, Ben, thanks for the time. Want to walk through usage, hear what's working, and especially hear what's not.
+
+[00:04] Olivia Park: Big picture — we're getting the value we expected on visibility. Where I'm getting heat from my team is on outbound. Ben, you want to take this?
+
+[00:06] Ben Hartford: Yeah. We need webhook coverage on more event types. Right now we get shipment.created, shipment.delivered, and exception.flagged. We need intermediate state — picked_up, in_transit_segment_complete, customs_cleared, out_for_delivery. We're polling your API every 90 seconds to fake it and it's expensive.
+
+[00:08] Dana Kim: I'll log that as a formal request. How many of your downstream systems are consuming this?
+
+[00:09] Ben Hartford: Four. Our customer portal, our internal ops dashboard, our finance reconciliation, and our SLA monitoring service. All four are polling.
+
+[00:11] Olivia Park: The other thing — and I've raised this before — onboarding. We brought a new 3PL partner onto the platform last month. It took 11 weeks. Most of that was waiting on your team to provision API credentials and review their EDI mapping. We had hoped self-serve onboarding was coming.
+
+[00:13] Dana Kim: I know. That's on the roadmap, I don't have a public date yet. Let me push internally.
+
+[00:14] Olivia Park: When you do — if I could self-onboard a partner in under 2 weeks, that's a real expansion lever for us. Right now adding partners is a tax. If it weren't, we'd be running 3x the volume through you.
+
+[00:16] Ben Hartford: One more — any plans to add FedEx Custom Critical to the supported carriers? About 20% of our expedited freight is on them and we have to route around your system.
+
+[00:17] Dana Kim: Not on the current roadmap. I'll bring it back.
+
+[Call ended 00:19]

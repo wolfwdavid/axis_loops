@@ -1,0 +1,28 @@
+CALL: GlobalShip Holdings - Technical Deep Dive
+Date: 2026-04-29
+Attendees: Sarah Chen (AE), Elena Vasquez (CTO, GlobalShip), Raj Patel (Solutions Engineering)
+Deal Stage: Technical Evaluation
+Account ARR Tier: Enterprise ($120M revenue)
+Vertical: International freight forwarding
+
+[00:01] Sarah Chen: Elena, thanks. Raj is going to walk you through the integration architecture.
+
+[00:03] Elena Vasquez: Before we go deep — I want to make sure we're aligned on what "integration" means. We have 60+ carrier EDI feeds and we move significant volume over EDIFACT, especially IFTMIN and IFTSTA for our ocean and air freight legs. Where are you on EDIFACT?
+
+[00:05] Raj Patel: We have IFTMIN on the H2 2026 roadmap. Currently in design. We can support ANSI X12 day one and we have customers running hybrid setups with their existing EDI translator handling EDIFACT in front of us.
+
+[00:07] Elena Vasquez: Hybrid setups create exactly the kind of two-system reconciliation problem I'm trying to get rid of. I've spent the last 18 months consolidating away from that.
+
+[00:09] Raj Patel: Understood. I can put you in touch with two customers running our X12 product who could speak to whether a phased migration would work.
+
+[00:10] Elena Vasquez: I'd also want to know — and I know you guys hate this question — what's your differentiator versus ShipSync? They've been in our office twice this quarter. Their EDIFACT story is more mature today.
+
+[00:12] Sarah Chen: Three places we beat ShipSync, and I can back this with data: real-time visibility latency, our exception management workflow, and customer-facing API surface. ShipSync's API is rate-limited at 100 req/sec; ours is 10k.
+
+[00:14] Elena Vasquez: API matters. We're building a customer portal off of whoever we pick. ShipSync's webhook coverage is also a known pain point — they don't fire on intermediate status changes.
+
+[00:16] Raj Patel: We fire webhooks on every status transition. We can show you the event taxonomy.
+
+[00:17] Elena Vasquez: Send that. And get me a concrete EDIFACT date or this conversation goes cold.
+
+[Call ended 00:18]

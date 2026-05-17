@@ -1,0 +1,28 @@
+CALL: LogiCore SaaS - Security Review Follow-up
+Date: 2026-05-03
+Attendees: Tom Brennan (AE), Priya Iyer (Director of Engineering, LogiCore), Janet Walsh (Security Lead, LogiCore)
+Deal Stage: Late Stage / Stalled
+Account ARR Tier: Mid-Market ($18M revenue)
+Vertical: TMS for mid-market shippers
+
+[00:01] Tom Brennan: Priya, Janet, thanks for jumping back on. I know we've been at this a while. Wanted to get an honest read on where we stand.
+
+[00:03] Priya Iyer: Honestly Tom, on the product side we're sold. The team did the POC, they liked it. The blocker is purely security review.
+
+[00:04] Janet Walsh: We're 70 days into the review. Three open items: data residency for EU customers, your subprocessor list expanded since the contract draft, and we still don't have clean answers on incident response SLAs.
+
+[00:06] Tom Brennan: On data residency — we launched the EU region in March. I'll get you our DPA addendum today. Subprocessor changes — that's a notification process we owe you, my apologies. Incident response, I'll get our CISO on the next call.
+
+[00:08] Janet Walsh: Tom, I'll be candid. We had ShipSync through review at the same time. They cleared in 40 days. We're going to look bad to the executive team if we drag this past quarter end again.
+
+[00:10] Priya Iyer: The product is better than ShipSync's. Significantly. But I don't get to overrule security and neither does Janet really — we have a process.
+
+[00:12] Tom Brennan: I hear you. Quarter ends June 30. If I get you everything by end of next week, can we close the loop?
+
+[00:13] Janet Walsh: If the answers are clean, yes. If we have to do another round of follow-ups, we're into July.
+
+[00:14] Priya Iyer: And just so you know — the procurement team flagged your security review process is more painful than three other vendors we evaluated. That's worth feedback for your team.
+
+[00:15] Tom Brennan: Noted. Appreciate the directness.
+
+[Call ended 00:16]

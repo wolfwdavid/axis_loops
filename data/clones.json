@@ -1,0 +1,667 @@
+[
+  {
+    "id": "clone-1",
+    "name": "FreightOps GTM",
+    "createdAt": "2026-05-15T09:00:00.000Z",
+    "profile": {
+      "vertical": "Freight & logistics SaaS",
+      "icp": "Enterprise 3PLs and freight forwarders ($50M+ revenue) running multi-carrier EDI",
+      "salesMotion": "Sales-led enterprise with technical evaluation and security review",
+      "vocab": [
+        "EDI",
+        "EDIFACT",
+        "IFTMIN",
+        "SOC 2",
+        "security review",
+        "ShipSync",
+        "carrier integration",
+        "VAN",
+        "ANSI X12",
+        "webhook coverage"
+      ],
+      "weights": {
+        "revenue": 0.55,
+        "frequency": 0.25,
+        "recency": 0.2
+      },
+      "systemPromptOverrides": "Bias toward enterprise deal blockers and competitive displacement signals. Treat EDIFACT, security review, and ShipSync mentions as high-priority."
+    },
+    "transcriptFiles": [
+      "presales_01.txt",
+      "presales_02.txt",
+      "presales_03.txt"
+    ],
+    "role": "presales-focused",
+    "activityCount": 18,
+    "lastAnalyzedAt": "2026-05-15T09:00:00.000Z",
+    "cachedPatterns": [
+      {
+        "id": "pat-1a4f8c2e-1111-4111-8111-111111111111",
+        "loop": "presales",
+        "title": "EDIFACT / IFTMIN gap is blocking enterprise deals on day one",
+        "description": "Two of three enterprise prospects raised EDIFACT (specifically IFTMIN) as a non-negotiable on the first discovery call. We currently support ANSI X12 day one but EDIFACT is on roadmap with no GA date. Prospects explicitly call out the two-system reconciliation cost of a hybrid setup and tie it to walk-away decisions.",
+        "implications": {
+          "icp": "Our ICP today is effectively 'enterprise 3PLs whose overseas freight is under 30% of volume'. We should either narrow the ICP statement or ship EDIFACT.",
+          "dealFriction": "Without a public EDIFACT timeline, every enterprise deal stalls at discovery.",
+          "competitive": "ShipSync has a more mature EDIFACT story today and prospects know it."
+        },
+        "recommendation": "Get a public EDIFACT (IFTMIN + IFTSTA) GA date approved this week. If the date is >90 days from any open opportunity, route those deals to nurture and stop spending AE time on them.",
+        "severity": "critical",
+        "weight": 0.92,
+        "citations": [
+          {
+            "transcriptFile": "presales_01.txt",
+            "quote": "We need EDIFACT day one or we're going to be running two systems.",
+            "speaker": "Marcus Webb",
+            "timestamp": "00:09"
+          },
+          {
+            "transcriptFile": "presales_01.txt",
+            "quote": "If EDIFACT is more than 90 days out, we're probably not your customer this year.",
+            "speaker": "Marcus Webb",
+            "timestamp": "00:15"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "We have 60+ carrier EDI feeds and we move significant volume over EDIFACT, especially IFTMIN and IFTSTA for our ocean and air freight legs. Where are you on EDIFACT?",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:03"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "Send that. And get me a concrete EDIFACT date or this conversation goes cold.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:17"
+          }
+        ],
+        "sourceAgent": "Deal Friction Agent"
+      },
+      {
+        "id": "pat-1a4f8c2e-2222-4222-8222-222222222222",
+        "loop": "presales",
+        "title": "Security review process is losing late-stage deals to ShipSync",
+        "description": "LogiCore is 70 days into our security review and at risk of slipping past quarter end. ShipSync cleared the same customer's review in 40 days. The procurement contact directly flagged our security process as 'more painful than three other vendors we evaluated'.",
+        "implications": {
+          "dealFriction": "Our security review process is materially slower than competitors and is now the single blocker on a closeable mid-market deal.",
+          "competitive": "ShipSync is being used as the timing benchmark inside accounts."
+        },
+        "recommendation": "Pre-package the security pack (SOC 2, DPA addendum, subprocessor list, incident response SLA) into a single self-serve portal. Target 40-day median clearance time. Notify customers proactively on subprocessor changes.",
+        "severity": "critical",
+        "weight": 0.88,
+        "citations": [
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "We're 70 days into the review. Three open items: data residency for EU customers, your subprocessor list expanded since the contract draft, and we still don't have clean answers on incident response SLAs.",
+            "speaker": "Janet Walsh",
+            "timestamp": "00:04"
+          },
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "We had ShipSync through review at the same time. They cleared in 40 days.",
+            "speaker": "Janet Walsh",
+            "timestamp": "00:08"
+          },
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "The procurement team flagged your security review process is more painful than three other vendors we evaluated.",
+            "speaker": "Priya Iyer",
+            "timestamp": "00:14"
+          }
+        ],
+        "sourceAgent": "Deal Friction Agent"
+      },
+      {
+        "id": "pat-1a4f8c2e-3333-4333-8333-333333333333",
+        "loop": "presales",
+        "title": "ShipSync is showing up in every enterprise deal — our differentiators aren't landing",
+        "description": "ShipSync is named explicitly in all three pre-sales calls. We have real technical advantages (10k req/sec API vs their 100, broader webhook coverage, better exception management) but those advantages aren't being communicated until the prospect raises ShipSync. By then the comparison is set on their terms.",
+        "implications": {
+          "competitive": "We are reactive on ShipSync. The competitive narrative is being driven by them.",
+          "messaging": "Our top-of-funnel messaging does not lead with API throughput, webhook taxonomy, or exception management — the three places we measurably win."
+        },
+        "recommendation": "Build a one-pager: '3 places we beat ShipSync (with numbers)'. Push it into discovery decks and the SE technical eval kit. Coach AEs to lead with it, not respond to it.",
+        "severity": "high",
+        "weight": 0.81,
+        "citations": [
+          {
+            "transcriptFile": "presales_01.txt",
+            "quote": "Honestly, this is the same conversation I had with ShipSync six months ago and they couldn't move on it.",
+            "speaker": "Marcus Webb",
+            "timestamp": "00:09"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "What's your differentiator versus ShipSync? They've been in our office twice this quarter. Their EDIFACT story is more mature today.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:10"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "Three places we beat ShipSync, and I can back this with data: real-time visibility latency, our exception management workflow, and customer-facing API surface. ShipSync's API is rate-limited at 100 req/sec; ours is 10k.",
+            "speaker": "Sarah Chen",
+            "timestamp": "00:12"
+          }
+        ],
+        "sourceAgent": "Competitive Intel Agent"
+      },
+      {
+        "id": "pat-1a4f8c2e-4444-4444-8444-444444444444",
+        "loop": "presales",
+        "title": "Webhook coverage is now an evaluation criterion, not a feature",
+        "description": "GlobalShip explicitly named ShipSync's webhook gap as a known pain point and asked us to send our event taxonomy. This indicates webhooks have moved from a nice-to-have to a binary buy criterion in enterprise eval — and it's an area where we currently have a real advantage we should weaponize.",
+        "implications": {
+          "messaging": "Our webhook taxonomy should be a leading slide in the technical evaluation deck.",
+          "competitive": "Prospects are explicitly using webhook coverage to disqualify ShipSync."
+        },
+        "recommendation": "Publish the webhook event taxonomy externally (docs page + PDF). Push the link to every active enterprise opportunity within 7 days.",
+        "severity": "high",
+        "weight": 0.74,
+        "citations": [
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "ShipSync's webhook coverage is also a known pain point — they don't fire on intermediate status changes.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:14"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "We fire webhooks on every status transition. We can show you the event taxonomy.",
+            "speaker": "Raj Patel",
+            "timestamp": "00:16"
+          }
+        ],
+        "sourceAgent": "Messaging Effectiveness Agent"
+      },
+      {
+        "id": "pat-1a4f8c2e-5555-4555-8555-555555555555",
+        "loop": "presales",
+        "title": "ICP should tighten: enterprise 3PLs with majority-domestic freight (US X12) until EDIFACT ships",
+        "description": "Pattern across all three pre-sales calls: every enterprise prospect with material international volume hits the EDIFACT wall. Mid-market (LogiCore) loved the product on POC but stalled on security review, not EDI. ICP refinement: enterprise prospects with predominantly domestic (X12) freight close faster and have higher product-market fit today.",
+        "implications": {
+          "icp": "Two cleaner segments: (1) enterprise 3PLs majority-domestic where X12 is sufficient, (2) mid-market shippers where security review velocity is the lever.",
+          "dealFriction": "Disqualify international-heavy enterprises until EDIFACT GA is in flight."
+        },
+        "recommendation": "Update qualification criteria in the AE playbook: ask % EDIFACT volume on call 1. >30% = nurture until EDIFACT ships. Score and route inbound accordingly.",
+        "severity": "high",
+        "weight": 0.71,
+        "citations": [
+          {
+            "transcriptFile": "presales_01.txt",
+            "quote": "About a third of our overseas freight runs IFTMIN.",
+            "speaker": "David Ortiz",
+            "timestamp": "00:06"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "Hybrid setups create exactly the kind of two-system reconciliation problem I'm trying to get rid of. I've spent the last 18 months consolidating away from that.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:07"
+          },
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "On the product side we're sold. The team did the POC, they liked it. The blocker is purely security review.",
+            "speaker": "Priya Iyer",
+            "timestamp": "00:03"
+          }
+        ],
+        "sourceAgent": "ICP Refinement Agent"
+      }
+    ]
+  },
+  {
+    "id": "clone-2",
+    "name": "FreightOps CS",
+    "createdAt": "2026-05-15T09:00:00.000Z",
+    "profile": {
+      "vertical": "Freight & logistics SaaS",
+      "icp": "Existing mid-market and enterprise 3PLs in year 2+ of contract, $240k-$480k ARR",
+      "salesMotion": "Renewal + expansion, CSM-led",
+      "vocab": [
+        "webhook coverage",
+        "UPS",
+        "FedEx",
+        "carrier integration",
+        "onboarding velocity",
+        "renewal risk",
+        "polling",
+        "NPS",
+        "feature request",
+        "expansion"
+      ],
+      "weights": {
+        "revenue": 0.5,
+        "frequency": 0.3,
+        "recency": 0.2
+      },
+      "systemPromptOverrides": "Bias toward renewal-risk signals and patterns that appear across multiple accounts. Treat any feature request raised by 2+ accounts as a productized opportunity."
+    },
+    "transcriptFiles": [
+      "customer_01.txt",
+      "customer_02.txt",
+      "customer_03.txt"
+    ],
+    "role": "customer-focused",
+    "activityCount": 22,
+    "lastAnalyzedAt": "2026-05-15T09:00:00.000Z",
+    "cachedPatterns": [
+      {
+        "id": "pat-2b5f8c2e-1111-4111-8111-111111111111",
+        "loop": "customer",
+        "title": "Webhook coverage gap is now appearing in 3 of 3 customer calls — productize immediately",
+        "description": "PortLane, FleetVista, and DockMaster all raised webhook coverage in back-to-back calls. Customers are polling our API at scale to compensate, with documented infrastructure cost ($4k/month at DockMaster alone). At DockMaster this has been an open ask for 14 months and is now part of a renewal-risk conversation.",
+        "implications": {
+          "featureRequest": "This is a productizable, repeatable request — 3/3 customers in two weeks.",
+          "accountHealth": "DockMaster ($360k ARR) is at-risk renewal, and webhooks is one of two named blockers.",
+          "upsell": "Eliminating polling unlocks event-driven downstream architectures customers are clearly building toward."
+        },
+        "recommendation": "Promote granular webhook event types (picked_up, in_transit_segment_complete, customs_cleared, out_for_delivery, yard events) to a Q3 commit. Communicate timeline to all 3 named accounts within 7 days.",
+        "severity": "critical",
+        "weight": 0.95,
+        "citations": [
+          {
+            "transcriptFile": "customer_01.txt",
+            "quote": "We need webhook coverage on more event types. Right now we get shipment.created, shipment.delivered, and exception.flagged. We need intermediate state — picked_up, in_transit_segment_complete, customs_cleared, out_for_delivery. We're polling your API every 90 seconds to fake it and it's expensive.",
+            "speaker": "Ben Hartford",
+            "timestamp": "00:06"
+          },
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "This is the third customer in two weeks who's raised this with me.",
+            "speaker": "Dana Kim",
+            "timestamp": "00:05"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We've been asking for granular event webhooks for 14 months. We're now running polling at scale and it costs us about $4k a month in infrastructure that should not need to exist.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:09"
+          }
+        ],
+        "sourceAgent": "Feature Request Agent"
+      },
+      {
+        "id": "pat-2b5f8c2e-2222-4222-8222-222222222222",
+        "loop": "customer",
+        "title": "UPS / FedEx carrier gap is a renewal blocker with revenue impact at 3 accounts",
+        "description": "UPS and FedEx Custom Critical were named on three separate customer calls. FleetVista (35% UPS volume) is staying year-to-year because of it. DockMaster (60% UPS volume at some customers) is treating it as a refund conversation. PortLane needs FedEx Custom Critical for 20% of expedited freight. Customers are building and maintaining parallel systems at material cost.",
+        "implications": {
+          "accountHealth": "DockMaster ($360k ARR) renewal at risk; FleetVista ($480k ARR) won't sign multi-year without UPS.",
+          "featureRequest": "Add UPS Ground, UPS Surepost, and FedEx Custom Critical as first-class carriers.",
+          "upsell": "FleetVista explicitly tied UPS support to multi-year commitment."
+        },
+        "recommendation": "Commit UPS Ground + Surepost as first-class carriers in Q3. Communicate to FleetVista and DockMaster directly with a real date within 10 days. Evaluate refund/credit conversation for DockMaster pre-renewal.",
+        "severity": "critical",
+        "weight": 0.93,
+        "citations": [
+          {
+            "transcriptFile": "customer_01.txt",
+            "quote": "Any plans to add FedEx Custom Critical to the supported carriers? About 20% of our expedited freight is on them and we have to route around your system.",
+            "speaker": "Ben Hartford",
+            "timestamp": "00:16"
+          },
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "UPS Ground and UPS Surepost as first-class carriers. About 35% of our parcel volume runs through UPS and we're maintaining a custom integration layer ourselves.",
+            "speaker": "Wesley Nakamura",
+            "timestamp": "00:06"
+          },
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "If we shipped UPS support in Q3, would that change your renewal conversation? Yes. Frankly it would let me commit to a multi-year.",
+            "speaker": "Wesley Nakamura",
+            "timestamp": "00:10"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We've been asking for UPS as a first-class carrier since the day we signed. We have customers that are 60% UPS by volume and we cannot serve them on your platform.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:11"
+          }
+        ],
+        "sourceAgent": "Account Health Agent"
+      },
+      {
+        "id": "pat-2b5f8c2e-3333-4333-8333-333333333333",
+        "loop": "customer",
+        "title": "DockMaster is actively in flight to ShipSync — 10-day window to save the renewal",
+        "description": "DockMaster procurement is openly evaluating ShipSync. The technical lead (Aisha) says ShipSync's product is not actually better, but two specific gaps (webhooks, UPS) plus 14 months of unaddressed asks have made it a vendor-trust issue. Procurement is treating the 18-month parallel-system cost as a refund conversation, not a renewal conversation.",
+        "implications": {
+          "accountHealth": "$360k ARR renewal at imminent risk. Hard deadline given by procurement.",
+          "competitive": "ShipSync has already demoed inside the account.",
+          "messaging": "The trust problem is now bigger than the feature problem — fixing features alone won't recover this without an executive-level acknowledgment."
+        },
+        "recommendation": "Executive escalation this week. Bring CPO and CRO into the next call. Combine UPS commitment + webhook commitment + commercial gesture (credit on parallel-system cost). Treat as a save play, not a renewal call.",
+        "severity": "critical",
+        "weight": 0.9,
+        "citations": [
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We're evaluating alternatives. ShipSync did a demo last month and the procurement question on the table is whether we move at renewal.",
+            "speaker": "Phil Rinaldi",
+            "timestamp": "00:03"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "From my seat — the contract pricing assumed full carrier coverage. We've built a parallel system for 18 months. That cost belongs in a refund conversation, not a renewal conversation.",
+            "speaker": "Phil Rinaldi",
+            "timestamp": "00:13"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "Ten days, Dana. If we don't have real answers, we go to RFP.",
+            "speaker": "Phil Rinaldi",
+            "timestamp": "00:17"
+          }
+        ],
+        "sourceAgent": "Account Health Agent"
+      },
+      {
+        "id": "pat-2b5f8c2e-4444-4444-8444-444444444444",
+        "loop": "customer",
+        "title": "Self-serve partner onboarding is a 3x volume expansion lever (PortLane)",
+        "description": "PortLane explicitly tied self-serve onboarding to 3x volume expansion — they would route significantly more freight through us if adding a partner didn't take 9-11 weeks of our team's involvement. DockMaster independently flagged 9-week partner onboarding as a smaller-but-real friction point.",
+        "implications": {
+          "upsell": "Self-serve onboarding is a direct revenue lever, not just a CS efficiency play.",
+          "accountHealth": "Slow onboarding is a recurring secondary complaint compounding other dissatisfaction."
+        },
+        "recommendation": "Scope self-serve partner onboarding (API credential provisioning + EDI mapping wizard) as an explicit expansion-revenue project. Target: <2 weeks median onboarding. Quantify the PortLane expansion case in the business case.",
+        "severity": "high",
+        "weight": 0.72,
+        "citations": [
+          {
+            "transcriptFile": "customer_01.txt",
+            "quote": "We brought a new 3PL partner onto the platform last month. It took 11 weeks. Most of that was waiting on your team to provision API credentials and review their EDI mapping. We had hoped self-serve onboarding was coming.",
+            "speaker": "Olivia Park",
+            "timestamp": "00:11"
+          },
+          {
+            "transcriptFile": "customer_01.txt",
+            "quote": "When you do — if I could self-onboard a partner in under 2 weeks, that's a real expansion lever for us. Right now adding partners is a tax. If it weren't, we'd be running 3x the volume through you.",
+            "speaker": "Olivia Park",
+            "timestamp": "00:14"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "Onboarding is also slow but that's a smaller issue. We added a partner in April and it took 9 weeks.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:16"
+          }
+        ],
+        "sourceAgent": "Upsell/Cross-Sell Agent"
+      },
+      {
+        "id": "pat-2b5f8c2e-5555-4555-8555-555555555555",
+        "loop": "customer",
+        "title": "Carrier performance analytics is an adjacent product opportunity (FleetVista)",
+        "description": "FleetVista is spending a quarter of an FTE building rolled-up carrier performance analytics (on-time-delivery, exception rates, damage rates per carrier per lane) in Looker on top of our raw API data. This is adjacent to a benchmarking product the team has already been scoping internally. FleetVista is willing to be a design partner.",
+        "implications": {
+          "featureRequest": "Productize carrier performance analytics as a new SKU.",
+          "upsell": "FleetVista is a willing reference / design partner — accelerates GTM."
+        },
+        "recommendation": "Schedule product lead intro with Wesley Nakamura this week. Scope a benchmarking SKU with FleetVista as design partner. Validate willingness-to-pay before build.",
+        "severity": "medium",
+        "weight": 0.58,
+        "citations": [
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "Carrier performance analytics. We can pull raw data out via API, but we need rolled-up on-time-delivery, exception rates, and damage rates per carrier per lane. We're building this ourselves now in Looker and it's a quarter of an FTE.",
+            "speaker": "Wesley Nakamura",
+            "timestamp": "00:13"
+          },
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "That's interesting — that's adjacent to a benchmarking product we've been scoping internally. Can I have our product lead reach out to you on this specifically?",
+            "speaker": "Dana Kim",
+            "timestamp": "00:15"
+          }
+        ],
+        "sourceAgent": "Upsell/Cross-Sell Agent"
+      }
+    ]
+  },
+  {
+    "id": "clone-3",
+    "name": "FreightOps Unified",
+    "createdAt": "2026-05-15T09:00:00.000Z",
+    "profile": {
+      "vertical": "Freight & logistics SaaS",
+      "icp": "Mid-market and enterprise 3PLs / freight forwarders, $18M-$120M revenue, multi-carrier EDI",
+      "salesMotion": "Hybrid: sales-led new business + CSM-led expansion and renewal",
+      "vocab": [
+        "EDI",
+        "EDIFACT",
+        "ShipSync",
+        "webhook coverage",
+        "UPS",
+        "FedEx",
+        "security review",
+        "SOC 2",
+        "carrier integration",
+        "onboarding velocity"
+      ],
+      "weights": {
+        "revenue": 0.5,
+        "frequency": 0.3,
+        "recency": 0.2
+      },
+      "systemPromptOverrides": "Cross-loop synthesis: surface patterns that show up in BOTH pre-sales blockers AND existing-customer gaps. Prioritize signals where pre-sales objections match retained-customer complaints — those are roadmap-level."
+    },
+    "transcriptFiles": [
+      "presales_01.txt",
+      "presales_02.txt",
+      "presales_03.txt",
+      "customer_01.txt",
+      "customer_02.txt",
+      "customer_03.txt"
+    ],
+    "role": "balanced",
+    "activityCount": 35,
+    "lastAnalyzedAt": "2026-05-15T09:00:00.000Z",
+    "cachedPatterns": [
+      {
+        "id": "pat-3c6f8c2e-1111-4111-8111-111111111111",
+        "loop": "customer",
+        "title": "Carrier coverage (UPS/FedEx/EDIFACT) is the single biggest cross-loop signal in the dataset",
+        "description": "Pre-sales: EDIFACT/IFTMIN named in 2 of 3 enterprise discovery calls as a deal-breaker. Customer: UPS/FedEx named in 3 of 3 customer calls, with two accounts tying it to renewal risk or multi-year commitment. The pattern across both loops is identical: carrier coverage gaps force customers to build and maintain parallel systems.",
+        "implications": {
+          "icp": "Our effective ICP is narrowing on both ends: enterprise prospects with EDIFACT walk away; existing customers with UPS volume churn or stall expansion.",
+          "featureRequest": "Carrier coverage is a single roadmap theme, not two separate ones.",
+          "competitive": "ShipSync wins the EDIFACT story today; competitive carrier integration plays are already in flight at our largest at-risk account."
+        },
+        "recommendation": "Frame 'carrier coverage' as one roadmap track (EDIFACT IFTMIN/IFTSTA + UPS Ground/Surepost + FedEx Custom Critical) with a public quarterly cadence. This is the highest-leverage single investment given dual-loop signal strength.",
+        "severity": "critical",
+        "weight": 0.97,
+        "citations": [
+          {
+            "transcriptFile": "presales_01.txt",
+            "quote": "We need EDIFACT day one or we're going to be running two systems.",
+            "speaker": "Marcus Webb",
+            "timestamp": "00:09"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "Send that. And get me a concrete EDIFACT date or this conversation goes cold.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:17"
+          },
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "If we shipped UPS support in Q3, would that change your renewal conversation? Yes. Frankly it would let me commit to a multi-year.",
+            "speaker": "Wesley Nakamura",
+            "timestamp": "00:10"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We've been asking for UPS as a first-class carrier since the day we signed. We have customers that are 60% UPS by volume and we cannot serve them on your platform.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:11"
+          }
+        ],
+        "sourceAgent": "Feature Request Agent"
+      },
+      {
+        "id": "pat-3c6f8c2e-2222-4222-8222-222222222222",
+        "loop": "customer",
+        "title": "Webhook coverage: 3/3 customers, and now an enterprise pre-sales discriminator",
+        "description": "Cross-loop pattern. All three customer accounts asked for granular webhooks in May. One pre-sales prospect (GlobalShip) explicitly used webhook coverage as a competitive discriminator against ShipSync in the same period. The same investment closes both leakage points.",
+        "implications": {
+          "featureRequest": "Granular webhook event types is the highest-frequency request we have.",
+          "messaging": "We can lead with webhook coverage in pre-sales — prospects are already disqualifying ShipSync on it.",
+          "accountHealth": "DockMaster at-risk renewal cites webhooks as one of two named blockers."
+        },
+        "recommendation": "Ship granular webhook event taxonomy as a Q3 commit. Publish the event taxonomy externally and push to both customer accounts and active enterprise opportunities.",
+        "severity": "critical",
+        "weight": 0.91,
+        "citations": [
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "This is the third customer in two weeks who's raised this with me.",
+            "speaker": "Dana Kim",
+            "timestamp": "00:05"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We've been asking for granular event webhooks for 14 months. We're now running polling at scale and it costs us about $4k a month in infrastructure that should not need to exist.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:09"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "ShipSync's webhook coverage is also a known pain point — they don't fire on intermediate status changes.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:14"
+          }
+        ],
+        "sourceAgent": "Feature Request Agent"
+      },
+      {
+        "id": "pat-3c6f8c2e-3333-4333-8333-333333333333",
+        "loop": "presales",
+        "title": "ShipSync is the consistent competitive shadow across both loops",
+        "description": "ShipSync is named in all 3 pre-sales calls AND in the at-risk renewal call (DockMaster). They are positioned as faster on security review, more mature on EDIFACT today, and actively prospecting our most at-risk customer. Our advantages (API throughput, webhook taxonomy, exception management) are real but only surface when the prospect raises the comparison.",
+        "implications": {
+          "competitive": "ShipSync is the named alternative in every commercially material conversation in this dataset.",
+          "messaging": "We are reactive on ShipSync across pre-sales AND retention.",
+          "accountHealth": "DockMaster has already taken a ShipSync demo."
+        },
+        "recommendation": "Stand up a competitive war room specifically on ShipSync. Quarterly comp-sheet refresh, dedicated battlecard, AE + CSM enablement. Treat any ShipSync mention in a call as a high-priority signal in CRM.",
+        "severity": "high",
+        "weight": 0.84,
+        "citations": [
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "We had ShipSync through review at the same time. They cleared in 40 days.",
+            "speaker": "Janet Walsh",
+            "timestamp": "00:08"
+          },
+          {
+            "transcriptFile": "presales_03.txt",
+            "quote": "What's your differentiator versus ShipSync? They've been in our office twice this quarter. Their EDIFACT story is more mature today.",
+            "speaker": "Elena Vasquez",
+            "timestamp": "00:10"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We're evaluating alternatives. ShipSync did a demo last month and the procurement question on the table is whether we move at renewal.",
+            "speaker": "Phil Rinaldi",
+            "timestamp": "00:03"
+          }
+        ],
+        "sourceAgent": "Competitive Intel Agent"
+      },
+      {
+        "id": "pat-3c6f8c2e-4444-4444-8444-444444444444",
+        "loop": "presales",
+        "title": "Security review velocity is a closeable mid-market deal blocker",
+        "description": "LogiCore is a $18M mid-market deal that has been won on product and lost on security-review process speed. ShipSync cleared the same customer's review in 40 days versus our 70+. Procurement explicitly called our process more painful than three other vendors. This is one mid-market segment where we are losing on operations, not product.",
+        "implications": {
+          "dealFriction": "Process latency, not capability, is the blocker on closeable mid-market.",
+          "competitive": "ShipSync is benchmarking us on review velocity inside accounts."
+        },
+        "recommendation": "Productize the security pack: trust portal with SOC 2, DPA addendum, subprocessor list (with auto-notification), incident response SLA. Target 40-day median review. Owner: CISO + RevOps.",
+        "severity": "high",
+        "weight": 0.79,
+        "citations": [
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "On the product side we're sold. The team did the POC, they liked it. The blocker is purely security review.",
+            "speaker": "Priya Iyer",
+            "timestamp": "00:03"
+          },
+          {
+            "transcriptFile": "presales_02.txt",
+            "quote": "The procurement team flagged your security review process is more painful than three other vendors we evaluated.",
+            "speaker": "Priya Iyer",
+            "timestamp": "00:14"
+          }
+        ],
+        "sourceAgent": "Deal Friction Agent"
+      },
+      {
+        "id": "pat-3c6f8c2e-5555-4555-8555-555555555555",
+        "loop": "customer",
+        "title": "Feedback loop is broken — customers don't know if requests are heard",
+        "description": "FleetVista flagged that feature requests filed through the support portal 'go into a black hole'. PortLane and DockMaster have requests open for months-to-years (DockMaster: 14 months on webhooks). The structural problem is invisibility of the request pipeline back to customers. This compounds product-gap dissatisfaction into vendor-trust dissatisfaction — which is what flipped DockMaster.",
+        "implications": {
+          "accountHealth": "Process opacity is converting recoverable feature gaps into unrecoverable trust gaps.",
+          "featureRequest": "Build a customer-facing request status surface (received → triaged → roadmapped → in build → shipped).",
+          "messaging": "When a request finally ships, proactively close the loop with the requesting accounts by name."
+        },
+        "recommendation": "Stand up a customer-facing roadmap / feedback portal in Q3. Backfill status on every open request from the past 12 months. Notify all 3 customer accounts in writing.",
+        "severity": "high",
+        "weight": 0.75,
+        "citations": [
+          {
+            "transcriptFile": "customer_02.txt",
+            "quote": "The way I have to file feature requests right now, through the support portal, those requests go into a black hole. I never know if anyone read them. Fix that loop, you'll get better signal.",
+            "speaker": "Wesley Nakamura",
+            "timestamp": "00:16"
+          },
+          {
+            "transcriptFile": "customer_03.txt",
+            "quote": "We've been asking for granular event webhooks for 14 months.",
+            "speaker": "Aisha Brown",
+            "timestamp": "00:09"
+          }
+        ],
+        "sourceAgent": "Feedback Structuring Agent"
+      }
+    ]
+  },
+  {
+    "id": "66d9257b-738f-4428-9a7a-0f08071a2417",
+    "name": "axis",
+    "createdAt": "2026-05-17T17:46:56.911Z",
+    "profile": {
+      "vertical": "dev tools",
+      "icp": "someone who does not code",
+      "salesMotion": "enterprise",
+      "vocab": [
+        "dev tools",
+        "enterprise",
+        "integration",
+        "security review",
+        "expansion",
+        "churn risk",
+        "onboarding",
+        "competitive displacement"
+      ],
+      "weights": {
+        "revenue": 0.5,
+        "frequency": 0.3,
+        "recency": 0.2
+      },
+      "systemPromptOverrides": "hackathon"
+    },
+    "transcriptFiles": [
+      "presales_01.txt",
+      "presales_02.txt",
+      "presales_03.txt",
+      "customer_01.txt",
+      "customer_02.txt",
+      "customer_03.txt"
+    ],
+    "role": "balanced",
+    "activityCount": 18
+  }
+]

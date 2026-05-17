@@ -1,0 +1,28 @@
+CALL: FreightLink Inc - Discovery Call
+Date: 2026-04-22
+Attendees: Sarah Chen (AE), Marcus Webb (VP Operations, FreightLink), David Ortiz (IT Director, FreightLink)
+Deal Stage: Discovery
+Account ARR Tier: Enterprise ($80M revenue)
+Vertical: Freight forwarding / 3PL
+
+[00:02] Sarah Chen: Thanks for taking the time, Marcus. I wanted to walk through how teams like yours are using us to consolidate shipment visibility.
+
+[00:04] Marcus Webb: Before we get into that — the first thing my team will ask, and I need to get ahead of, is EDI. We've got 47 carrier partners running on EDI 214 and 990 transactions. If you can't sit on top of that pipeline cleanly, this is a non-starter for us.
+
+[00:05] Sarah Chen: Totally hear you. We support EDI 214, 990, 204, and 210 out of the box, and we've got a VAN-agnostic gateway —
+
+[00:06] David Ortiz: What about EDIFACT? About a third of our overseas freight runs IFTMIN.
+
+[00:07] Sarah Chen: IFTMIN is on the roadmap but not GA yet. I'd want to bring our integrations PM into the next conversation to give you a real answer on timeline.
+
+[00:09] Marcus Webb: That's going to be a problem. Honestly, this is the same conversation I had with ShipSync six months ago and they couldn't move on it. We need EDIFACT day one or we're going to be running two systems.
+
+[00:11] David Ortiz: Also need to flag — anything we bring in has to clear our security review. SOC 2 Type II, pen test results, vendor risk questionnaire. That process averages 90 days for us.
+
+[00:13] Sarah Chen: We have SOC 2 Type II. I can send the report over today along with our standard VRQ responses. Most of our enterprise customers cleared review in 60.
+
+[00:15] Marcus Webb: We'll see. Look — get me the EDIFACT timeline, get David the security pack, and let's reconvene in two weeks. If EDIFACT is more than 90 days out, we're probably not your customer this year.
+
+[00:16] Sarah Chen: Understood. I'll have both by Friday.
+
+[Call ended 00:18]

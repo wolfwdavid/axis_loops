@@ -1,0 +1,14 @@
+node_modules
+/.svelte-kit
+/build
+/dist
+/artifact-dist
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+*.log
+
+# runtime persistence (regenerated on demand)
+data/decisions.jsonl

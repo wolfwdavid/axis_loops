@@ -1,0 +1,31 @@
+CALL: DockMaster Solutions - Renewal Risk Discussion
+Date: 2026-05-12
+Attendees: Dana Kim (CSM), Aisha Brown (VP Tech, DockMaster), Phil Rinaldi (Director of Procurement, DockMaster)
+Account Status: Existing Customer (Year 2)
+Account ARR: $360,000
+Renewal: 2026-08-30 (at risk)
+NPS last quarter: 5
+
+[00:01] Dana Kim: Aisha, Phil, thanks for making time. I want to be upfront — I know your renewal is coming up and I've heard there are concerns.
+
+[00:03] Phil Rinaldi: Concerns is generous. We're evaluating alternatives. ShipSync did a demo last month and the procurement question on the table is whether we move at renewal.
+
+[00:05] Aisha Brown: Phil, I want to be fair — ShipSync's product isn't actually better. It's that two specific things are killing us right now and we've raised them multiple times.
+
+[00:06] Phil Rinaldi: Which is the part that worries me — if we're paying $360k and asking for things and not getting movement, that's a vendor problem regardless of who's better.
+
+[00:08] Dana Kim: I want to hear both things directly.
+
+[00:09] Aisha Brown: One: webhook coverage. We've been asking for granular event webhooks for 14 months. We're now running polling at scale and it costs us about $4k a month in infrastructure that should not need to exist.
+
+[00:11] Aisha Brown: Two: UPS and FedEx integration. We've been asking for UPS as a first-class carrier since the day we signed. We have customers that are 60% UPS by volume and we cannot serve them on your platform. We've had to build a parallel system. It's untenable.
+
+[00:13] Phil Rinaldi: From my seat — the contract pricing assumed full carrier coverage. We've built a parallel system for 18 months. That cost belongs in a refund conversation, not a renewal.
+
+[00:14] Dana Kim: I hear you. Phil, on the commercial side, I need to take that internally. Aisha — on UPS specifically, I'm hearing this from at least three accounts now. Let me come back to you within 10 days with a real answer.
+
+[00:16] Aisha Brown: Onboarding is also slow but that's a smaller issue. We added a partner in April and it took 9 weeks.
+
+[00:17] Phil Rinaldi: Ten days, Dana. If we don't have real answers, we go to RFP.
+
+[Call ended 00:19]

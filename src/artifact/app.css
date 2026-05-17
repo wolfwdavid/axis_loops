@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-axis-bg: #050816;
+  --color-axis-deep: #0a1024;
+  --color-axis-glow: #7dd3fc;
+  --color-axis-accent: #c084fc;
+  --color-axis-warn: #f97316;
+  --color-axis-mute: #475569;
+  --font-display: 'Inter', 'system-ui', sans-serif;
+}
+
+html,
+body {
+  background: radial-gradient(ellipse at center, #0a1024 0%, #050816 70%);
+  min-height: 100vh;
+  margin: 0;
+  color: #e2e8f0;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  min-height: 100vh;
+}
