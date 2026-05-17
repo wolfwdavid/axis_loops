@@ -11,6 +11,13 @@ Captured patterns from corrections during builds. Review before starting new wor
 **Why:** Stack pivots cost ~10-20 min of the 2-hour budget each. Avoidable with one targeted confirmation right before `create-*` runs.
 **How to apply:** Before any `create-next-app` / `create-svelte` / `vite create` command, surface a one-line "locking in <stack> — confirm?" check unless the user has explicitly named the framework.
 
+## L004 — Don't let a tsconfig that extends a generated path cross a build boundary
+**Date:** 2026-05-17
+**Trigger:** GitHub Actions build of the artifact target failed because the root `tsconfig.json` extends `./.svelte-kit/tsconfig.json` — that directory is generated locally by `svelte-kit sync` but absent in a fresh CI checkout. The artifact build (which doesn't need SvelteKit types at all) was poisoned by the same tsconfig.
+**Rule:** When a target has its own build (different Vite config, different entrypoint), give it its OWN `tsconfig.json` inside its root directory. Don't let it inherit a sibling target's generated-file-dependent tsconfig.
+**Why:** Generated config files (`.svelte-kit/`, `.next/`, `__generated__/`) aren't reproducible without running the framework's sync step. CI does `npm ci` and then jumps straight to the build target — if your target depends on a generated tsconfig, it breaks the moment it crosses into a clean environment.
+**How to apply:** Whenever I add a `vite.<name>.config.ts` with `root: 'src/<name>'`, also create `src/<name>/tsconfig.json` with no `extends` — make it self-sufficient. Verify by running `rm -rf .svelte-kit && npm run build:<name>` before pushing.
+
 ## L003 — Scrub AI tooling artifacts BEFORE the initial commit, not after
 **Date:** 2026-05-17
 **Trigger:** First push to GitHub included `CLAUDE.md` and `.claude/settings.local.json` even though I had done a prose-level scrub of "Claude/Gemini/Anthropic" in markdown files. The tooling files themselves leaked the AI provenance.
