@@ -11,6 +11,13 @@ Captured patterns from corrections during builds. Review before starting new wor
 **Why:** Stack pivots cost ~10-20 min of the 2-hour budget each. Avoidable with one targeted confirmation right before `create-*` runs.
 **How to apply:** Before any `create-next-app` / `create-svelte` / `vite create` command, surface a one-line "locking in <stack> — confirm?" check unless the user has explicitly named the framework.
 
+## L003 — Scrub AI tooling artifacts BEFORE the initial commit, not after
+**Date:** 2026-05-17
+**Trigger:** First push to GitHub included `CLAUDE.md` and `.claude/settings.local.json` even though I had done a prose-level scrub of "Claude/Gemini/Anthropic" in markdown files. The tooling files themselves leaked the AI provenance.
+**Rule:** Before `git add .` on any initial commit, gitignore the standard tooling-artifact set: `.claude/`, `CLAUDE.md`, `AGENTS.md`, `.cursor/`, `.cursorrules`, `.aider*`, `.continue/`. Then verify with `git status --short | grep -iE "claude|cursor|aider|copilot|agent"` — should be empty.
+**Why:** A prose-level scrub catches `s/Claude/model/g` but misses *file names* that ARE the brand. The first commit fingerprinted the toolchain.
+**How to apply:** Bake the AI-tooling block into the `.gitignore` template at scaffold time, before the first `git add`. Or run the grep check as a pre-commit gate.
+
 ## L002 — Don't grep against ANSI-coloured logs for readiness
 **Date:** 2026-05-17
 **Trigger:** Polled the Vite dev-server log for `Local:` to detect ready state. The log contained `[1mLocal[22m:` with terminal escape codes between `Local` and `:`, so the regex never matched and the poll task burned its timeout.

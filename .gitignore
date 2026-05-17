@@ -12,3 +12,11 @@ Thumbs.db
 
 # runtime persistence (regenerated on demand)
 data/decisions.jsonl
+
+# tooling — keep local
+.claude
+CLAUDE.md
+AGENTS.md
+.cursor
+.cursorrules
+.aider*
